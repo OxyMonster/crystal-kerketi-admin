@@ -1,0 +1,59 @@
+ <div class="row h-100 admin">
+    <div class="container admin-login col-lg-5">
+        <div class="admin-login__content p-3"> 
+            <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                <div class="admin-login__content__user-id input-group col-12 mb-3">
+                    <div class="input-group-prepend">
+                        
+                        <span class="input-group-text" id="basic-addon1">
+                            <fa-icon [icon]="faUser"></fa-icon>
+                        </span>
+                    </div>
+                    <input type="text" 
+                            formControlName="userName"
+                            class="form-control" 
+                            placeholder="Agent" 
+                            aria-label="Username" 
+                            aria-describedby="basic-addon1"
+                            >
+                </div>
+                <div class="admin-login__content__user-id input-group col-12  mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">
+                                <fa-icon [icon]="faLock"></fa-icon>
+                            </span>
+                        </div>
+                        <input type="password" 
+                                formControlName="password"
+                                class="form-control" 
+                                placeholder="Password" 
+                                aria-label="Password" 
+                                aria-describedby="basic-addon1"
+                                >
+                </div>
+                <div class="admin-login__content__button col-12 d-flex justify-content-center mt-4">
+                    <div class="admin-login__content__button__content col-6">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                </div>
+
+                <div class="admin-login__content__lang col-12 d-flex justify-content-center mt-4">
+                    <div class="admin-login__content__lang__content col-4">
+                        <div    *ngIf="!isEngLangActive" 
+                                class="admin-login__content__lang__content__button" 
+                                (click) = 'toggleLanguage()'
+                                > 
+                                English
+                        </div>
+                        <div    *ngIf="isEngLangActive"
+                                class="admin-login__content__lang__content__button" 
+                                (click) = 'toggleLanguage()'
+                                > 
+                                Georgian 
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

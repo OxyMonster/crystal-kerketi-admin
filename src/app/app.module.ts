@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminLoginModule } from './admin-login/admin-login.module';
+import { CommonModule } from '@angular/common';  
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [   
+    AppComponent, 
   ],
   imports: [
+    CommonModule, 
+    AdminLoginModule, 
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

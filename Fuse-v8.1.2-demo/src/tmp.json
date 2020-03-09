@@ -1,0 +1,62 @@
+{
+    "id": 1,
+    "userInfo": {
+        "addresses": [
+            {
+                "isCurrent": true,
+                "typeId": 1,
+                "regionId": 1,
+                "districtId": 1,
+                "zip": 1,
+                "street": "ასდფასდფ",
+                "id": 1,
+                "$$ashKey": "0TZ"
+            },
+            {
+                "isCurrent": true,
+                "typeId": 2,
+                "regionId": 1,
+                "districtId": 2,
+                "zip": 2,
+                "street": "ასდფასდ",
+                "id": 2,
+                "$$ashKey": "0U6"
+            }
+        ],
+        "phones": [
+            {
+                "typeId": 1,
+                "phone": "555333222",
+                "id": 1,
+                "$$ashKey": "0U9"
+            }
+        ],
+        "emails": [],
+        "pid": "55533322211",
+        "firstName": "დსფასდფ",
+        "lastName": "სდაფასდფ",
+        "dob": "2000-12-31T20:00:00.000Z",
+        "gender": 1,
+        "citizenshipCountryId": 1,
+        "smartphoneType": 2
+    },
+    "securityQuestions": [
+        {
+            "questionID": 1,
+            "answer": "ასდფსად",
+            "id": 1,
+            "$$ashKey": "0UB"
+        },
+        {
+            "questionID": 5,
+            "answer": "ასდფასდ",
+            "id": 2,
+            "$$ashKey": "0UD"
+        }
+    ],
+    "token": "71b2b089e40c80a59e9ff2008eceff15",
+    "msisdn": 555333222,
+    "agentName": "scry_dev11",
+    "languageId": 1,
+    "sessionId": "3D3F171D0446C11291319418A6507E34"
+}
