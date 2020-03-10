@@ -21,7 +21,7 @@ const COMPONENTS  = [
     ReactiveFormsModule,
     FormsModule, 
     SharedModule,
-    CommonModule
+    CommonModule,
   ],
 
   providers: [

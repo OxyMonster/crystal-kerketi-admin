@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {  faUser, faLock} from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -25,13 +26,17 @@ export class AdminLoginComponent implements OnInit {
   
 
   constructor(
-    private fb: FormBuilder   
+    private fb: FormBuilder, 
+    private translateService: TranslateService
   ) {
     this.loginForm = this.fb.group({
       userName: [ '', Validators.required ],
       password: [ '', Validators.required ]
 
     }); 
+
+    translateService.setDefaultLang('eng'); 
+
    }
 
 
@@ -47,11 +52,14 @@ export class AdminLoginComponent implements OnInit {
     
   }; 
 
-  toggleLanguage() {
+  toggleLanguage(language) {
 
     this.isEngLangActive = !this.isEngLangActive; 
+    this.translateService.use(language)
+
   
   }; 
+
   
 
 
