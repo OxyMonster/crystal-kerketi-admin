@@ -20,7 +20,7 @@ export class AdminLoginComponent implements OnInit {
   // * * / * * 
   
   loginForm: FormGroup;
-  isEngLangActive: boolean = false; 
+  isEngLangActive: boolean = true; 
 
 
   
