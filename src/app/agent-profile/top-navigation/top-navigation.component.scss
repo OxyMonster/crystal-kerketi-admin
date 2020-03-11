@@ -10,6 +10,15 @@
             justify-content: center;
             cursor: pointer;
             border-right: 1px solid black;
+            color: #D6D6D6;    
+
+            &__icon {
+                margin-right: 1rem;
+            }
+
+            &__text {
+                text-align: center;
+            }
 
             a {
                 color: #D6D6D6;    

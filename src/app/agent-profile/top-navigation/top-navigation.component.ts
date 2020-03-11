@@ -8,7 +8,7 @@ import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class TopNavigationComponent implements OnInit {
 
-  faDotCircle = faDotCircle; 
+  faDotCircle = faBullseye; 
 
   constructor() { }
 
