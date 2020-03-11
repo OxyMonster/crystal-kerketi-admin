@@ -1,0 +1,26 @@
+.navigation {
+
+    &__logos {
+        border-right: 1px solid black;
+    }
+
+    &__menu {
+
+        &__item {
+            justify-content: center;
+            cursor: pointer;
+            border-right: 1px solid black;
+
+            a {
+                color: #D6D6D6;    
+                text-decoration: none;           
+            }; 
+
+            &:hover {
+                color: white !important;
+                background: rgba(56, 123, 178, 0.6);
+                transition: .3s;
+            }
+        }
+    }
+}

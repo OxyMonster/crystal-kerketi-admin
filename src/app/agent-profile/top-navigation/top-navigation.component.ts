@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-top-navigation',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-navigation.component.scss']
 })
 export class TopNavigationComponent implements OnInit {
+
+  faDotCircle = faDotCircle; 
 
   constructor() { }
 
