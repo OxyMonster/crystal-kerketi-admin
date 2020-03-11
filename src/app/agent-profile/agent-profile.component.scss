@@ -1,0 +1,17 @@
+@import 'src/assets/variables';
+
+.agent {
+
+    &__left-navigation {
+        // height: 100vh;
+    background-color: $dark-grey;
+
+    }; 
+
+    &__top {
+        // height: 5.5rem;
+        // &__navigation {
+            background-color: $light-black;
+        // }
+    }
+}

@@ -8,8 +8,8 @@ import { CommonModule } from '@angular/common';
 
 
 const COMPONENTS  = [
-  AdminLoginComponent
 
+  AdminLoginComponent
 ]
 
 

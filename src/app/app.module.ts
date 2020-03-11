@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { AgentProfileModule } from './agent-profile/agent-profile.module';
 
 
 
@@ -20,6 +21,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   imports: [
     CommonModule, 
     AdminLoginModule, 
+    AgentProfileModule, 
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

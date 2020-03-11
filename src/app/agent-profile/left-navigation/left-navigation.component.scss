@@ -1,0 +1,46 @@
+@import 'src/assets/variables';
+
+
+.navigation {
+
+   &__logo {
+       background-color: $light-black;
+   }
+
+    &__box {
+        
+        &__item {
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+            border-bottom: 1px solid #34495e;
+
+            &__icon {
+                text-align: center;
+            }; 
+
+            &__text {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            font-size: .8125rem;
+            color: #a7bfd6;
+
+            &:hover {
+                color: #fff;
+                background: rgba(75, 110, 139, 0.6);
+                transition: .3s;
+            }
+        }
+        
+    }
+}
+
+
+.acitve {
+    color: #fff;
+    background: rgba(75, 110, 139, 0.6);
+}; 

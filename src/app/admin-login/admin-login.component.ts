@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faLock, faFan } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
+import { AdminLoginService } from './admin-login.service';
+import { Router } from '@angular/router';
 
 
 
@@ -22,16 +24,22 @@ export class AdminLoginComponent implements OnInit {
   loginForm: FormGroup;
   isEngLangActive: boolean = true; 
 
+  isError: boolean = false; 
+  errorMessage: string; 
+
 
   
 
   constructor(
     private fb: FormBuilder, 
-    private translateService: TranslateService
+    private translateService: TranslateService, 
+    private loginService: AdminLoginService,
+    private router: Router
   ) {
     this.loginForm = this.fb.group({
-      userName: [ '', Validators.required ],
-      password: [ '', Validators.required ]
+      agentName: [ '', Validators.required ],
+      password: [ '', Validators.required ],
+      languageId: 2
 
     }); 
 
@@ -46,9 +54,28 @@ export class AdminLoginComponent implements OnInit {
 
 
   onSubmit(adminForm: FormGroup) {  
-     
-    console.log(adminForm.value);
-    this.loginForm.reset(); 
+    
+    //  * * * Set Language * * * 
+    this.isEngLangActive ? this.loginForm.controls['languageId'].setValue(2) : 
+                           this.loginForm.controls['languageId'].setValue(1); 
+    // * * * Authorize * * * 
+    this.loginService
+        .authorizeAgent(adminForm.value)
+        .subscribe( data => {
+
+          if ( data['errorMessage'] ) {
+            
+            this.isError = true;
+            this.errorMessage = data['errorMessage']; 
+
+          } else {
+
+            this.isError = false;
+            this.router.navigate(['/agent-profile']); 
+          }; 
+          console.log(data);
+          
+        }, err => console.log(err) );  
     
   }; 
 

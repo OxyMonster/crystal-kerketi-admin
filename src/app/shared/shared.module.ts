@@ -14,6 +14,7 @@ const Exports  = [
   imports: [
     CommonModule, 
     FontAwesomeModule,
+    TranslateModule
   ], 
   exports : Exports
 

@@ -20,12 +20,17 @@
                             <img src="assets/img/georgia.svg" alt="">
                         </div>
                         <span>Georgian</span>
-                         
                 </div>
             </div>
         </div>
         <div class="admin-login__content py-3 mt-2"> 
             <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                <div *ngIf="isError"  
+                     class="admin-login__content__error d-flex justify-content-center mb-4">
+                    <div class="admin-login__content__error__box col-md-6 p-3">
+                        <span > {{ errorMessage }} </span>
+                    </div>
+                </div>
                 <div class="admin-login__content__user-id input-group col-12 mb-3">
                     <div class="input-group-prepend">
                         
@@ -34,11 +39,12 @@
                         </span>
                     </div>
                     <input type="text" 
-                            formControlName="userName"
+                            formControlName="agentName"
                             class="form-control" 
                             placeholder = "{{'AGENTNAME' | translate}}"
-                            aria-label="Username" 
+                            aria-label="agentName" 
                             aria-describedby="basic-addon1"
+                            required
                             >
                 </div>
                 <div class="admin-login__content__user-id input-group col-12  mb-3">
@@ -53,9 +59,10 @@
                                 placeholder = "{{'PASSWORD' | translate}}" 
                                 aria-label="Password" 
                                 aria-describedby="basic-addon1"
+                                required
                                 >
                 </div>
-                <div class="admin-login__content__button col-12 d-flex justify-content-center mt-4">
+                <div class="admin-login__content__button col-12 d-flex justify-content-center mt-5">
                     <div class="admin-login__content__button__content col-6">
                         <button class="btn btn-primary" type="submit"> {{ 'LOGIN' | translate }} </button>
                     </div>
