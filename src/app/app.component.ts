@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crystal-kerketi-admin';
+
+  constructor(
+    private translateService: TranslateService
+  ) {
+
+    translateService.setDefaultLang('eng'); 
+
+  }; 
 
 
 }

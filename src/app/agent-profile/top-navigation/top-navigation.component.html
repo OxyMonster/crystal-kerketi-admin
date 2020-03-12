@@ -1,33 +1,61 @@
 <div class="row navigation">
-    <div class="navigation__logos col-md-2">
+    <div class="navigation__logos col-md-2 h-100">
         <app-company-logos></app-company-logos>
     </div>
     <div class="navigation__menu col-md-6 row ">
         
-        <div class="navigation__menu__item d-flex align-items-center justify-content-center col-md-3">
-                <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Client</a>
+        <div class="navigation__menu__item  col-md-3" 
+            (click) = 'toggleRouteNavigationType("client")'
+            [ngClass]="{active: navigationType === 'client'}" >
+            <div class="navigation__menu__item__icon w-100 mt-3">
+                <fa-icon [icon]="faUser"></fa-icon>
+            </div>
+            <div class="navigation__menu__item__text" style="text-align: center;">
+                <p> {{ 'CLIENT' | translate }} </p>
+            </div>
         </div>
         
-        <div class="navigation__menu__item d-flex align-items-center justify-content-center col-md-3">
-            <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Client</a>
+        <div class="navigation__menu__item col-md-3" 
+            (click) = 'toggleRouteNavigationType("transactions")'
+            [ngClass]="{active: navigationType === 'transactions'}">
+            <div class="navigation__menu__item__icon w-100 mt-3">
+                <fa-icon [icon]="faMoneyCheckAlt"></fa-icon>
+            </div>
+            <div class="navigation__menu__item__text">
+                <p > {{ 'TRANSACTIONS' | translate }} </p> 
+            </div>
         </div>
     
-        <div class="navigation__menu__item d-flex align-items-center justify-content-center col-md-3">
-            <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Client</a>
+        <div class="navigation__menu__item  col-md-3" 
+            (click) = 'toggleRouteNavigationType("agent")'
+            [ngClass]="{active: navigationType === 'agent'}">
+            <div class="navigation__menu__item__icon w-100 mt-3">
+                <fa-icon [icon]="faUserSecret"></fa-icon>
+            </div>
+            <div class="navigation__menu__item__text">
+                <p > {{ 'AGENT' | translate }}  </p>
+            </div>
         </div>
         
-        <div class="navigation__menu__item d-flex align-items-center justify-content-center col-md-3">
-            <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Client</a>
+        <div class="navigation__menu__item  col-md-3" 
+            (click) = 'toggleRouteNavigationType("reports")'
+            [ngClass]="{active: navigationType === 'reports'}">
+            <div class="navigation__menu__item__icon w-100 mt-3">
+                <fa-icon [icon]="faBug"></fa-icon>
+            </div>
+            <div class="navigation__menu__item__text">
+                <p > {{ 'REPORTS' | translate }} </p>
+            </div>
         </div>
     
- 
+
 
     </div>   
-    <div class="col-md-4 navigation__currency-user row">
-        <div class="navigation__currency-user__currency col-md-6" style="text-align: center;">
+    <div class="col-md-4 navigation__currency-user row h-100">
+        <div class="navigation__currency-user__currency col-md-6 h-100" style="text-align: center;">
             <app-currency></app-currency>
         </div>
-        <div class="navigation__currency-user__currency__user col-md-6" style="text-align: center;">
+        <div class="navigation__currency-user__currency__user col-md-6 h-100" style="text-align: center;">
             <div class="col-12">
                 <p>AgentName: </p>
             </div>

@@ -1,0 +1,73 @@
+<div class="navigation  h-100 justify-content-end">
+
+    <div class="navigation__box col-12 pr-0 mt-3">
+        <a [routerLink]="['/account-wallets']" 
+            routerLinkActive="active" 
+            class="navigation__box__item d-flex justify-content-between w-100 p-3"
+            >
+            <div class="navigation__box__item__icon col-3">
+                <fa-icon [icon]="faBullseye"></fa-icon>
+            </div>
+            <div class="navigation__box__item__text col-9 p-0">
+                <p> {{ 'MY_TRANSACTIONS' | translate }} </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="navigation__box col-12 pr-0 ">
+        <a [routerLink]="['/client-accounts']" 
+            routerLinkActive="active" 
+            class="navigation__box__item d-flex justify-content-between w-100 p-3"
+            >
+            <div class="navigation__box__item__icon col-3">
+                <fa-icon [icon]="faBullseye"></fa-icon>
+            </div>
+            <div class="navigation__box__item__text col-9 p-0">
+                <p> {{ 'CHANGE_OWN_PASSWORD' | translate }} </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="navigation__box col-12 pr-0 ">
+        <a [routerLink]="['/view-edit-client']" 
+            routerLinkActive="active" 
+            class="navigation__box__item d-flex justify-content-between w-100 p-3"
+            >
+            <div class="navigation__box__item__icon col-3">
+                <fa-icon [icon]="faBullseye"></fa-icon>
+            </div>
+            <div class="navigation__box__item__text col-9 p-0">
+                <p> {{ 'AGENT_PASSWORD_RECOVERY' | translate }} </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="navigation__box col-12 pr-0 ">
+        <a [routerLink]="['/register-account']" 
+            routerLinkActive="active" 
+            class="navigation__box__item d-flex justify-content-between w-100 p-3"
+            >
+            <div class="navigation__box__item__icon col-3">
+                <fa-icon [icon]="faBullseye"></fa-icon>
+            </div>
+            <div class="navigation__box__item__text col-9 p-0">
+                <p> {{ 'DEACTIVATE_AGENT' | translate }} </p>
+            </div>
+        </a>
+    </div> 
+
+    <div class="navigation__box col-12 pr-0 ">
+        <a [routerLink]="['/close-account']" 
+            routerLinkActive="active" 
+            class="navigation__box__item d-flex justify-content-between w-100 p-3"
+            >
+            <div class="navigation__box__item__icon col-3">
+                <fa-icon [icon]="faBullseye"></fa-icon>
+            </div>
+            <div class="navigation__box__item__text col-9 p-0">
+                <p> {{ 'Activate Agent' | translate }} </p>
+            </div>
+        </a>
+    </div>
+    
+</div>

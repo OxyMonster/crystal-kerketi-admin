@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { faMoneyCheckAlt, faUser, faUserSecret, faBug } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-navigation',
@@ -8,11 +9,47 @@ import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class TopNavigationComponent implements OnInit {
 
-  faDotCircle = faBullseye; 
+  @Output() result: EventEmitter<string> = new EventEmitter<string>(); 
 
-  constructor() { }
+  // * * *  Icons * * *
+  faUser = faUser; 
+  faMoneyCheckAlt = faMoneyCheckAlt; 
+  faUserSecret = faUserSecret; 
+  faBug = faBug; 
+
+  navigationType: string; 
+
+
+
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+
+  }; 
+
+
+  toggleRouteNavigationType(type: string) {
+    this.navigationType = type; 
+    this.result.emit(type); 
+
+    switch (type) {
+      case 'client':
+        this.router.navigate(['/agent-profile/client']); 
+        break;
+      case 'transactions' : 
+        this.router.navigate(['/agent-profile/transactions'])
+        break;
+      case 'agent':
+        this.router.navigate(['/agent-profile/agent']); 
+        break;
+      case 'reports' : 
+        this.router.navigate(['/agent-profile/reports'])
+        break;
+    }
+  
   }
 
 }

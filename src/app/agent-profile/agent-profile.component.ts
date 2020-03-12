@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgentProfileComponent implements OnInit {
 
+  navigationType: string; 
+
   constructor() { }
 
   ngOnInit() {
+
+  }; 
+
+  getNavigationType(e) {
+    // console.log(e);
+    this.navigationType = e;
+    
   }
 
 }

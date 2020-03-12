@@ -43,7 +43,7 @@ export class AdminLoginComponent implements OnInit {
 
     }); 
 
-    translateService.setDefaultLang('eng'); 
+    // translateService.setDefaultLang('eng'); 
 
    }
 
@@ -71,7 +71,7 @@ export class AdminLoginComponent implements OnInit {
           } else {
 
             this.isError = false;
-            this.router.navigate(['/agent-profile']); 
+            this.router.navigate(['/agent-profile/client']); 
           }; 
           console.log(data);
           

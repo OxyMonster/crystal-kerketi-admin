@@ -1,35 +1,53 @@
 .navigation {
+    // height: 5rem;
+    @media (min-width: 768px) {
+        height: 5rem;
+        
+        };
 
     &__logos {
         border-right: 1px solid black;
     }
 
     &__menu {
-
+        height: 100%;
         &__item {
             justify-content: center;
             cursor: pointer;
             border-right: 1px solid black;
             color: #D6D6D6;    
+            font-size: .875rem;
+            // font-weight: lighter;
 
             &__icon {
-                margin-right: 1rem;
+                // margin-right: 1rem;
+                text-align: center;
             }
 
             &__text {
                 text-align: center;
             }
 
-            a {
+            p {
                 color: #D6D6D6;    
                 text-decoration: none;           
             }; 
 
             &:hover {
+                background: #136a8a; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
                 color: white !important;
-                background: rgba(56, 123, 178, 0.6);
-                transition: .3s;
+                transition: .4s;
             }
+            
         }
     }
+}; 
+
+.active {
+    background: #136a8a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
+    color: white !important;
 }

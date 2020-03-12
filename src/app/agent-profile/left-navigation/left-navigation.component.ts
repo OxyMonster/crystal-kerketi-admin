@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input } from '@angular/core';
 import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -9,6 +9,7 @@ import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class LeftNavigationComponent implements OnInit {
 
+  @Input() navigationType: string; 
 
 // * * * Icons * * * 
   faBullseye = faBullseye;  
@@ -17,6 +18,9 @@ export class LeftNavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    
+  }; 
+
+  
 
 }
