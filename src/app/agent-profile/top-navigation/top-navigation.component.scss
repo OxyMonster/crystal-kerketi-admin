@@ -1,6 +1,6 @@
 .navigation {
     // height: 5rem;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         height: 5rem;
         
         };
@@ -41,6 +41,50 @@
                 transition: .4s;
             }
             
+        }
+    }; 
+
+    &__currency-user {
+        
+        &__currency {
+            font-size: .775rem;
+            color: white;
+            background: #2c3e50; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #2c3e50, #fd746c); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #2c3e50, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-weight: bold;
+            white-space: nowrap;
+            p {
+                margin: 0;
+                margin-top: .4rem;
+            } 
+        }; 
+
+        &__user {
+            font-size: .875rem;
+            color: white;
+            
+            button {
+                background: #4ecdc4; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #4ecdc4, #556270); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #4ecdc4, #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                border: none;
+                // outline: none;
+                box-shadow: none;
+
+                &:active {
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    background: #4ecdc4; /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #4ecdc5e1, #556270); /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #4ecdc5bb, #556270b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    border: none;
+                }
+            }
+
+          
         }
     }
 }; 

@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faMoneyCheckAlt, faUser, faUserSecret, faBug } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-top-navigation',
@@ -16,18 +16,19 @@ export class TopNavigationComponent implements OnInit {
   faMoneyCheckAlt = faMoneyCheckAlt; 
   faUserSecret = faUserSecret; 
   faBug = faBug; 
+  // * * * / * * * 
 
   navigationType: string; 
 
-
-
-
   constructor(
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
 
+    this.navigationType = this.activatedRoute.snapshot.params.id;
+    
   }; 
 
 
@@ -48,8 +49,7 @@ export class TopNavigationComponent implements OnInit {
       case 'reports' : 
         this.router.navigate(['/agent-profile/reports'])
         break;
-    }
-  
-  }
+    };
+  };
 
 }
