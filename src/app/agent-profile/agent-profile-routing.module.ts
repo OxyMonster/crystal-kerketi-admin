@@ -27,7 +27,10 @@ import { GiveLoanToGroupComponent } from './main-content/transactions/give-loan-
 import { CollectDeptFromGroupComponent } from './main-content/transactions/collect-dept-from-group/collect-dept-from-group.component';
 import { TransactionHistoryComponent } from './main-content/transactions/transaction-history/transaction-history.component';
 import { TransactionDetailsComponent } from './main-content/transactions/transaction-details/transaction-details.component';
-import { AgentsComponent } from './main-content/reports/agents/agents.component';
+import { ReportsAgentsComponent } from './main-content/reports/reports-agents/reports-agents.component';
+import { ReportsClientsComponent } from './main-content/reports/reports-clients/reports-clients.component';
+import { ReportsReportComponent } from './main-content/reports/reports-report/reports-report.component';
+import { WalletBalancesComponent } from './main-content/reports/wallet-balances/wallet-balances.component';
 
 
 const routes: Routes = [
@@ -35,9 +38,9 @@ const routes: Routes = [
     { path: '', component: AgentProfileComponent, children: [
       { path: '', redirectTo: 'client', pathMatch: 'full' }, 
 
+      // * * * * Client * * * * * *
       { path: 'client', redirectTo: 'client/account-wallets', pathMatch: 'full', }, 
       { path: 'client/:id', component: ClientsComponent, children:[ 
-        // { path: '', redirectTo: 'account-wallets', pathMatch: 'full' },
         { path: 'account-wallets', component: AccountWalletsComponent, },
         { path: 'client-accounts', component: ClientAccountsComponent }, 
         { path: 'view-edit-client', component: ViewEditClientComponent},
@@ -47,6 +50,7 @@ const routes: Routes = [
         { path: 'unblock-amount', component: UnblockAmountComponent },
       ]}, 
 
+      // * * * * Agent * * * * * *
       { path: 'agent', redirectTo:'agent/my-transactions', pathMatch: 'full', }, 
       { path: 'agent/:id', component: AgentComponent, children: [
         { path: 'my-transactions', component: MyTransactionsComponent }, 
@@ -56,10 +60,17 @@ const routes: Routes = [
         { path: 'activate-agent', component: ActivateAgentComponent }, 
       ]},
      
+      // * * * * Reports * * * * * *
+      { path: 'reports', redirectTo: 'reports/agent'},
+      { path: 'reports/:id', component:ReportsComponent, children: [
+        { path: 'agents', component: ReportsAgentsComponent },
+        { path: 'clients', component: ReportsClientsComponent },
+        { path: 'report', component: ReportsReportComponent },
+        { path: 'wallet-ballances', component: WalletBalancesComponent },
 
-      { path: 'reports', component: ReportsComponent }, 
+      ]},  
+      // * * * * Transactions * * * * * *
       { path: 'transactions', redirectTo: 'transactions/cash-in', pathMatch: 'full', }, 
-      
       { path: 'transactions/:id', component: TransactionsComponent, children: [
         { path: 'cash-in', component: CashInComponent },
         { path: 'cash-out', component: CashOutComponent },

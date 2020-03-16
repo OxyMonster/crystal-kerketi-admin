@@ -39,6 +39,10 @@ import { TransactionDetailsComponent } from './main-content/transactions/transac
 import { CollectDeptComponent } from './main-content/transactions/collect-dept/collect-dept.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { AgentProfileRoutingModule } from './agent-profile-routing.module';
+import { ReportsAgentsComponent } from './main-content/reports/reports-agents/reports-agents.component';
+import { ReportsClientsComponent } from './main-content/reports/reports-clients/reports-clients.component';
+import { ReportsReportComponent } from './main-content/reports/reports-report/reports-report.component';
+import { WalletBalancesComponent } from './main-content/reports/wallet-balances/wallet-balances.component';
 
 const COMPONENTS = [
   AgentProfileComponent,
@@ -75,7 +79,11 @@ const COMPONENTS = [
   CollectDeptFromGroupComponent,
   TransactionHistoryComponent,
   TransactionDetailsComponent,
-  CollectDeptComponent
+  CollectDeptComponent, 
+  ReportsAgentsComponent, 
+  ReportsClientsComponent,
+  ReportsReportComponent,
+  WalletBalancesComponent
 ]
 
 @NgModule({

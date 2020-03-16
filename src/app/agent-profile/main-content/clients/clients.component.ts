@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { filter, takeUntil,  } from 'rxjs/operators';
+import {  takeUntil,  } from 'rxjs/operators';
 import { Subject, Observable } from 'rxjs';
 
 
@@ -9,6 +9,7 @@ import { Subject, Observable } from 'rxjs';
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
+
 export class ClientsComponent implements OnInit {
 
   activatedRoute: Observable<string>; 
@@ -16,7 +17,6 @@ export class ClientsComponent implements OnInit {
   destroy: Subject<void> = new Subject<void>(); 
   
   constructor(
-    private router: Router, 
     private route: ActivatedRoute
   ) { }
 
@@ -29,7 +29,7 @@ export class ClientsComponent implements OnInit {
               .subscribe(params => {
   
                 this.activatedRoute = params['params']['id']; 
-                console.log(this.activatedRoute);
+                return params['params']['id']
 
               }); 
               

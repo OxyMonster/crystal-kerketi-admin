@@ -1,5 +1,8 @@
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { faBullseye, faDotCircle } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
+import { takeUntil } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 
 @Component({
@@ -14,10 +17,31 @@ export class LeftNavigationComponent implements OnInit {
 // * * * Icons * * * 
   faBullseye = faBullseye;  
   faDotCircle = faDotCircle; 
+  // * * / * * 
 
-  constructor() { }
+  activeURL: Observable<string>; 
+  destroy: Subject<void> =  new Subject<void>(); 
+
+
+  constructor(
+    private router: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    
+    // this.router.paramMap
+    //            .pipe(
+    //             takeUntil(this.destroy)
+    //            )
+    //            .subscribe(params => {
+    //             console.log(params);
+                
+    //             this.activeURL = params['params']['id']; 
+
+    //             // console.log(this.activeURL);
+                  
+    //            }); 
+    
     
   }; 
 
