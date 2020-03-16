@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { filter, takeUntil,  } from 'rxjs/operators';
+import { Subject, Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-agent',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgentComponent implements OnInit {
 
-  constructor() { }
+  activatedRoute: Observable<string>; 
+
+  destroy: Subject<void> = new Subject<void>(); 
+
+
+  constructor(
+    private router: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+
+    this.router.paramMap
+    .pipe(
+      takeUntil(this.destroy)
+    )
+    .subscribe(params => {
+
+      this.activatedRoute = params['params']['id']; 
+      console.log(this.activatedRoute);
+      
+    })
+    
+
+    
+    
   }
 
 }

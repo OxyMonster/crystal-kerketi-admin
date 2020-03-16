@@ -65,7 +65,7 @@ export class AdminLoginComponent implements OnInit {
 
           if ( data['errorMessage'] ) {
             
-            this.isError = true;
+            this.isError = true;  
             this.errorMessage = data['errorMessage']; 
 
           } else {

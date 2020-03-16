@@ -22,12 +22,14 @@ export class TopNavigationComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    // private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
 
-    this.navigationType = this.activatedRoute.snapshot.params.id;
+    this.navigationType = this.router.url.split('/')[2];
+ 
+    
     
   }; 
 
@@ -49,6 +51,7 @@ export class TopNavigationComponent implements OnInit {
       case 'reports' : 
         this.router.navigate(['/agent-profile/reports'])
         break;
+
     };
   };
 

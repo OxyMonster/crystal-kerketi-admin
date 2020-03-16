@@ -17,16 +17,19 @@
             border-right: 1px solid black;
             color: #D6D6D6;    
             font-size: .875rem;
-            // font-weight: lighter;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 
             &__icon {
-                // margin-right: 1rem;
                 text-align: center;
-            }
+            }; 
 
             &__text {
                 text-align: center;
-            }
+            }; 
 
             p {
                 color: #D6D6D6;    
@@ -39,9 +42,9 @@
                 background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
                 color: white !important;
                 transition: .4s;
-            }
+            }; 
             
-        }
+        }; 
     }; 
 
     &__currency-user {
@@ -69,7 +72,6 @@
                 background: -webkit-linear-gradient(to right, #4ecdc4, #556270); /* Chrome 10-25, Safari 5.1-6 */
                 background: linear-gradient(to right, #4ecdc4, #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 border: none;
-                // outline: none;
                 box-shadow: none;
 
                 &:active {

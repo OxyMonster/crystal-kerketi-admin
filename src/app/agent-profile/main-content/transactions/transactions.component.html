@@ -1,1 +1,32 @@
-<p>transactions works!</p>
+<div [ngSwitch]="activatedRoute">
+    <div *ngSwitchCase="'cash-in'">
+        <app-cash-in></app-cash-in>
+    </div>
+    <div *ngSwitchCase="'cash-out'">
+        <app-cash-out></app-cash-out>
+    </div>
+    <div *ngSwitchCase="'charge-back'">
+        <app-charge-back></app-charge-back>
+    </div>
+    <div *ngSwitchCase="'collect-dept'">
+        <app-collect-dept></app-collect-dept>
+    </div>
+    <div *ngSwitchCase="'collect-dept-from-group'">
+        <app-collect-dept-from-group></app-collect-dept-from-group>
+    </div>
+    <div *ngSwitchCase="'give-loan'">
+        <app-give-loan></app-give-loan>
+    </div>
+    <div *ngSwitchCase="'give-loan-to-group'">
+        <app-give-loan-to-group></app-give-loan-to-group>
+    </div>
+    <div *ngSwitchCase="'transaction-details'">
+        <app-transaction-details></app-transaction-details>
+    </div>
+    <div *ngSwitchCase="'transaction-history'">
+        <app-transaction-history></app-transaction-history>
+    </div>
+    <div *ngSwitchDefault>
+        <app-cash-in></app-cash-in>
+    </div>
+</div>

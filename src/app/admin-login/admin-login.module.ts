@@ -4,6 +4,7 @@ import { AdminLoginService } from './admin-login.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';  
+import { AdminLoginRoutingModule } from './admin-login-routing.module';
 
 
 
@@ -18,6 +19,7 @@ const COMPONENTS  = [
   declarations: COMPONENTS,
 
   imports: [
+    AdminLoginRoutingModule, 
     ReactiveFormsModule,
     FormsModule, 
     SharedModule,

@@ -1,1 +1,26 @@
-<p>clients works!</p>
+<div [ngSwitch]="activatedRoute">
+    <div *ngSwitchCase="'account-wallets'">
+        <app-account-wallets></app-account-wallets>
+    </div>
+    <div *ngSwitchCase="'client-accounts'">
+        <app-client-accounts></app-client-accounts>
+    </div>
+    <div *ngSwitchCase="'view-edit-client'">
+        <app-view-edit-client></app-view-edit-client>
+    </div>
+    <div *ngSwitchCase="'register-account'">
+        <app-register-account></app-register-account>
+    </div>
+    <div *ngSwitchCase="'close-account'">
+        <app-close-account></app-close-account>
+    </div>
+    <div *ngSwitchCase="'pin-reset'">
+        <app-pin-reset></app-pin-reset>
+    </div>
+    <div *ngSwitchCase="'unblock-amount'">
+        <app-unblock-amount></app-unblock-amount>
+    </div>
+    <div *ngSwitchDefault>
+        <app-account-wallets></app-account-wallets>
+    </div>
+</div>

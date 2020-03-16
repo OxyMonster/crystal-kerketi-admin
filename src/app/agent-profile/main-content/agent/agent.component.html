@@ -1,1 +1,20 @@
-<p>agent works!</p>
+<div [ngSwitch]="activatedRoute">
+    <div *ngSwitchCase="'activate-agent'">
+        <app-activate-agent></app-activate-agent>
+    </div>
+    <div *ngSwitchCase="'agent-password-recovery'">
+        <app-agent-password-recovery></app-agent-password-recovery>
+    </div>
+    <div *ngSwitchCase="'change-own-password'">
+        <app-change-own-password></app-change-own-password>
+    </div>
+    <div *ngSwitchCase="'deactive-agent'">
+        <app-deactive-agent></app-deactive-agent>
+    </div>
+    <div *ngSwitchCase="'my-transactions'">
+        <app-my-transactions></app-my-transactions>
+    </div>
+    <div *ngSwitchDefault>
+        <app-activate-agent></app-activate-agent>
+    </div>
+</div>

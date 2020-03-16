@@ -10,21 +10,22 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AgentProfileModule } from './agent-profile/agent-profile.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
 
 @NgModule({
   declarations: [   
-    AppComponent, 
+    AppComponent, PageNotFoundComponent, 
   ],
   imports: [
     CommonModule, 
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule,
     AdminLoginModule, 
     AgentProfileModule, 
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

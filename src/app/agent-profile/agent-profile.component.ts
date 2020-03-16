@@ -16,7 +16,6 @@ export class AgentProfileComponent implements OnInit {
   }; 
 
   getNavigationType(e) {
-    // console.log(e);
     this.navigationType = e;
     
   }
