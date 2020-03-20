@@ -36,8 +36,8 @@ import { WalletBalancesComponent } from './main-content/reports/wallet-balances/
 const routes: Routes = [
   
     { path: '', component: AgentProfileComponent, children: [
-      { path: '', redirectTo: 'client', pathMatch: 'full' }, 
-
+      { path: '', redirectTo: 'client/account-wallets', pathMatch: 'full',  }, 
+      
       // * * * * Client * * * * * *
       { path: 'client', redirectTo: 'client/account-wallets', pathMatch: 'full', }, 
       { path: 'client/:id', component: ClientsComponent, children:[ 
