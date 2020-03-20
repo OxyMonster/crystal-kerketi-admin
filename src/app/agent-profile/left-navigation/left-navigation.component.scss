@@ -8,6 +8,7 @@
    }
 
     &__box {
+     
         
         &__item {
            
@@ -27,6 +28,7 @@
             text-decoration: none;
             font-size: .8125rem;
             color: #a7bfd6;
+            
 
             &:hover {
                 color: #fff;
@@ -41,7 +43,7 @@
 }
 
 
-.acitve {
-    color: #fff;
-    background: rgba(75, 110, 139, 0.6);
-}; 
+// .acitve {
+//     color: #fff;
+//     background: rgba(75, 110, 139, 0.6);
+// }; 

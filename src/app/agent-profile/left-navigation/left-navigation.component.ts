@@ -29,18 +29,18 @@ export class LeftNavigationComponent implements OnInit {
 
   ngOnInit() {
     
-    this.router.paramMap
-               .pipe(
-                takeUntil(this.destroy)
-               )
-               .subscribe(params => {
-                console.log(params);
+    // this.router.paramMap
+    //            .pipe(
+    //             takeUntil(this.destroy)
+    //            )
+    //            .subscribe(params => {
+    //             console.log(params);
                 
-                this.navigationType = params['params']['id']; 
+    //             this.activeURL = params['params']['id']; 
 
-                // console.log(this.activeURL);
+    //             // console.log(this.activeURL);
                   
-               }); 
+    //            }); 
     
     
   }; 

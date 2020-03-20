@@ -37,11 +37,9 @@
             }; 
 
             &:hover {
-                background: #136a8a; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
-                background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
-                color: white !important;
-                transition: .4s;
+                color: #fff;
+                background: rgba(75, 110, 139, 0.6);
+                transition: .2s;
             }; 
             
         }; 
@@ -92,8 +90,8 @@
 }; 
 
 .active {
-    background: #136a8a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #136a8a, #267871); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #136a8a, #267871); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
+    background: #136a8a !important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #136a8a, #267871) !important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #136a8a, #267871) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */              
     color: white !important;
 }

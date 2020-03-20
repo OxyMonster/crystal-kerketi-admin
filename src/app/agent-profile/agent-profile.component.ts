@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-agent-profile',
@@ -8,15 +11,32 @@ import { Component, OnInit } from '@angular/core';
 export class AgentProfileComponent implements OnInit {
 
   navigationType: string; 
+  isNavigationEvenetActive: boolean = false; 
 
-  constructor() { }
+  destroy: Subject<void> = new Subject<void>(); 
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+   
+    if ( !this.isNavigationEvenetActive ) {
 
+      this.navigationType =  this.router.url.split('/')[2];
+      console.log(this.navigationType);
+      
+    }
+    
   }; 
 
   getNavigationType(e) {
-    this.navigationType = e;
+    if (e) {
+      this.navigationType = e;
+      this.isNavigationEvenetActive = true; 
+    } else {
+      this.isNavigationEvenetActive = false; 
+    }
     
   }
 

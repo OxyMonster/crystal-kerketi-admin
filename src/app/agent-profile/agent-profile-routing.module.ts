@@ -59,16 +59,7 @@ const routes: Routes = [
         { path: 'deactive-agent', component: DeactiveAgentComponent }, 
         { path: 'activate-agent', component: ActivateAgentComponent }, 
       ]},
-     
-      // * * * * Reports * * * * * *
-      { path: 'reports', redirectTo: 'reports/agent'},
-      { path: 'reports/:id', component:ReportsComponent, children: [
-        { path: 'agents', component: ReportsAgentsComponent },
-        { path: 'clients', component: ReportsClientsComponent },
-        { path: 'report', component: ReportsReportComponent },
-        { path: 'wallet-ballances', component: WalletBalancesComponent },
-
-      ]},  
+  
       // * * * * Transactions * * * * * *
       { path: 'transactions', redirectTo: 'transactions/cash-in', pathMatch: 'full', }, 
       { path: 'transactions/:id', component: TransactionsComponent, children: [
@@ -82,7 +73,17 @@ const routes: Routes = [
         { path: 'transaction-history', component: TransactionHistoryComponent },
         { path: 'transaction-details', component: TransactionDetailsComponent },
 
-      ] }
+      ] },
+
+      // * * * * Reports * * * * * *
+      { path: 'reports', redirectTo: 'reports/clients', pathMatch: 'full' },
+      { path: 'reports/:id', component:ReportsComponent, children: [
+        { path: 'agents', component: ReportsAgentsComponent },
+        { path: 'clients', component: ReportsClientsComponent },
+        { path: 'report', component: ReportsReportComponent },
+        { path: 'wallet-ballances', component: WalletBalancesComponent },
+
+      ]},
   
 
     ] }, 

@@ -80,10 +80,10 @@ const COMPONENTS = [
   TransactionHistoryComponent,
   TransactionDetailsComponent,
   CollectDeptComponent, 
-  ReportsAgentsComponent, 
+  WalletBalancesComponent,
+  ReportsAgentsComponent,
   ReportsClientsComponent,
   ReportsReportComponent,
-  WalletBalancesComponent
 ]
 
 @NgModule({
